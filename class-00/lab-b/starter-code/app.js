@@ -125,7 +125,7 @@ let objectLit = () => ({
 console.log(objectLit());
 
 
-let sumAndProduct = (a, b) => {
+let sumAndProduct =  (a, b) => {
   let sum = a + b;
   let product = a * b;
   return [sum, product];
@@ -142,14 +142,13 @@ let message = name => `Hello, ${name}!`;
 console.log(message('Allie'));
 
 
-let Student = (name, age, hometown) => ({
-  name: name,
-  age: age,
-  hometown: hometown,
-  greeting: () => `Hi, my name is ${name}`
-});
+let Student = function (name, age, hometown) {
+  this.name = name;
+  this.age = age;
+  this.hometown = hometown;
+};
 
-let joe = Student('Joe', 'Schmoe', 100);
+let joe = new Student('Joe', 'Schmoe', 100);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
@@ -159,8 +158,9 @@ console.log(joe);
 
 
 
-// Student.prototype.greeting = () => `Hi, my name is ${this.name}`;
-
+Student.prototype.greeting = function () {
+  return `Hi, my name is ${this.name}`;
+};
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
@@ -186,17 +186,18 @@ Student.prototype.scope = function () {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// It references the Student or joe instance and all the variables included
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// It reference the window object within the browser.
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// Arrow functions do not bind their own this, but instead inherit from the parent scope.
+// https://www.codementor.io/dariogarciamoya/understanding-this-in-javascript-with-arrow-functions-gcpjwfyuc
