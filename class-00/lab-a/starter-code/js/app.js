@@ -40,7 +40,7 @@ function displayPics() {
   // By changing the var rando to const rando in line 33, the rando variable is now limited to the scope of the function displayPics() block, which means that it can not be used outside of it, hence the error.
   console.log(viewed);
 
-  for (const i = 0; i < 3; i++) {
+  for (let i = 0; i < 3; i++) {
     const temp = viewed.shift();
     pics[i].src = allProducts[temp].path;
     pics[i].id = allProducts[temp].name;
