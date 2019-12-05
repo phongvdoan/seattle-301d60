@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script id="neighborhood-template" type="text/x-handlebars-template">
+      <div >
+        <h2>{{name}} and {{notReal}}</h2>
+        <h3>{{city}}</h3>
+        <p>{{name}} was founded on {{founded}} and has a population of {{population}}</p>
+        <p>This is example text to show you how <strong>HTML</strong> can be escaped using <em>Handlebars</em>.</p>
+      </div>
+  </script>
+
+  <script id="dog-template" type="text/x-handlebars-template">
+    <div>
+      <h1>yo {{name}}</h1>
+      <p>{{loves}} are {{age}} many years old</p>
+    </div>
+</script>
+
+</head>
+<body>
+  
+  <main>
+    <section id="neighborhoods">
+      
+    </section>
+    <section id="dogs">
+      
+    </section>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="dataSet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

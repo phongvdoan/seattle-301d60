@@ -1,0 +1,24 @@
+footer, header{ 
+  height: 200px;
+}
+
+aside, section {
+  height: 600px;
+}
+
+aside:nth-child(1){
+  order: 1;
+}
+
+aside:nth-child(2){
+  order: 3;
+}
+
+section {
+  order: 2;
+}
+
+main {
+  display: flex;
+  
+}

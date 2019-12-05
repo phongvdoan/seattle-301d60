@@ -1,0 +1,25 @@
+header, footer {
+  height: 200px;
+}
+
+aside, section {
+  height: 600px;
+}
+
+aside{
+  width: 25%;
+  
+}
+
+section{
+   width: 50%;
+   margin: auto;
+  }
+
+  aside:nth-child(1){
+    float: left;
+  }
+
+  aside:nth-child(2){
+    float: right;
+  }
