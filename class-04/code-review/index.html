@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- the thing that goes in the {{}} is a key in my object -->
+  <script id="creature-template" type="text/x-handlebars-template">
+    <div data-page="{{page}}">
+      <h2>This is a {{description}}</h2>
+      <img src="{{image_url}}">
+      <p>My fav number (and num of horns) is {{horns}}</p>
+    </div>
+  </script>
+</head>
+<body>
+  <h1>Horned Beasts</h1>
+  <button id="page2">switch pages</button>
+  <button id="sort">sort</button>
+
+  <main>
+
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>

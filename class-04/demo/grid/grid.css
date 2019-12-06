@@ -1,0 +1,17 @@
+div {
+  background: #ccc;
+  border: solid black 1px;
+  height: 100px;
+  /* margin: 3em; */
+}
+
+div:nth-child(2n) {
+  width: 50px;
+}
+
+section {
+  align-items: end;
+  display: grid;
+  /* grid-template-columns: repeat(2, 30fr); */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
