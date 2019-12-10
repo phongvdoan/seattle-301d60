@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Explorer</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+
+    <h1>Explorer</h1>
+
+    <form id="url-form">
+      <label>Enter the URL to your deployed back end, making sure to remove the trailing forward slash</label>
+      <input type="text" id="back-end-url">
+    </form>
+    
+    <form id="geocode-form">
+      <label>Enter your Geocoding API Key:</label>
+      <input type="text" id="api-key">
+    </form>
+    
+    <section>
+      <a href="http://localhost:3000/puppy">Get a puppy</a>
+      <details>
+        <summary>A link to the server at the `/puppy` route</summary>
+        <p>This makes a GET request to the server by visiting the url <span class="highlight">http://localhost:3000/puppy</span></p>
+        <p>Chrome will display whatever our server sends as raw text on the new page that this opens</p>
+      </details>
+    </section>
+
+    <section id="yodas">
+      <button id="yoda">Get Yoda</button>
+      <details>
+        <summary>click this button to get yoda's stats and an image from the server</summary>
+        <p>This button has an event listener that makes a GET request to the server by visiting the url <span
+            class="highlight">http://localhost:3000/yoda</span></p>
+        <p>The client uses jquery to take the data and render a yoda image to the DOM</p>
+      </details>
+    </section>
+
+    <section >
+      <form id="search-form">
+        <label for="search">Search for a location</label>
+        <input type="text" name="search" id="input-search" placeholder="Enter a location here">
+        <button type="submit">Explore!</button>
+      </form>
+      <img id="map" class="hide" src="" alt="Map of search query">
+    </section>
+
+    <button id="getstuff">Get stuff</button>
+
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+  <script src="setup.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
