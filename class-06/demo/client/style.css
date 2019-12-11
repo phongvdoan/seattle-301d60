@@ -1,0 +1,13 @@
+section{
+  margin: 2em;
+}
+
+.highlight {
+  background: lightgrey;
+  font-weight: bold;
+
+}
+
+.hide {
+  display: none;
+}
