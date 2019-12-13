@@ -7,17 +7,25 @@ Read through this code as if you are the interpreter. Find all of the mistakes i
 'use strict';
 
 const express = require('express');
+const pg = require('pg');
 
-const app = app();
+const app = express();
+cons PORT = 3000;
 
-app.post(('/') => (request, response) {
-  let SQL = 'Insert into users values $0, $1, $2';
+const client = new pg.Client('postgres://ncarignan:password@localhost:5432/peeps');
+client.connect();
 
-  let values = {id, request.username, request.password};
+// localhost:3000/?username=ncarignan&password=supersecretpassword
+app.get('/',  (request, response) => {
+// when we select first in the app we have built, we do so to prevent duplicates
+  let SQL = 'INSERT INTO users (username, age, password) VALUES ($1, $2, $3)';
+
+  // the purpose of the values variable : store in the database
+  let values = [request.query.username, request.query.age, request.query.password ];
   
-  client.query(SQL)
-    .then({
-      response.send(result.rowsCount);
+  client.query(SQL, values)
+    .then(result => {
+      response.send(result.rowCount);
     })
 })
 
@@ -29,12 +37,12 @@ app.listen(PORT, () {
 ## schema.sql
 
 ```
-DROP TABLE IF NOT EXISTS users
+DROP TABLE IF EXISTS users;
 
-CREATE TABLE users() {
-  id SERIAL KEY;
-  username VARCHAR;
-  password VARCHAR;
-  age NUM;
-}
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255),
+  password VARCHAR(255),
+  age INTEGER NOT NULL
+);
 ```
