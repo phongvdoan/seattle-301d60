@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <nav><a href="/other-page">go to other page</a></nav>
+  <h1>Ice Cream</h1>
+  <ul>
+    <li>example ice cream</li>
+    <!-- <%= %> prints the value of the js run inside -->
+    <li><%= 'chocolate' %></li>
+    <li><%= 'chocolate' + ' is cool' %></li>
+    <li><%= iceCreams[1] %></li>
+    <% for(let i = 0; i < iceCreams.length; i++){ %>
+      <li><%= iceCreams[i] %></li>
+    <% } %>
+
+    <% sauces.forEach(sauce => { %>
+      <li><%= sauce.flavor %></li>
+    <%}) %>
+
+    
+    <% console.log('hello there, obi wan') %>
+
+    <% for(let i = 0; i < 10; i++) {%>
+
+      <p>stuff</p>
+
+    <% } %>
+
+    
+
+
+
+  </ul>
+</body>
+</html>
