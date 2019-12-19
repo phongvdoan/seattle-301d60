@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(223, 222, 222);
+  color: rgb(43, 42, 42);
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em;
+}
