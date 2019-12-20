@@ -12,7 +12,8 @@ The exam is open-book, open-Google, open-Stack_Overflow, whatever resources you 
 
 - Diversity and inclusion discussion
 - Warm-up exercise
-- Review code challenges
-- Wrap up book app
 - Review of topics by request
-- Discuss [final project requirements](./project-guidelines.md)
+- Review of 301
+- Project idea iteration
+- Project questions
+- Final Exam Prep
